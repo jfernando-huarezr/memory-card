@@ -31,7 +31,7 @@ export default function Game({ data, handleScoring }) {
 
   return (
     <>
-      <div className="gameboard mt-2">
+      <div className="gameboard d-flex align-items-start mt-2">
         <div className="row gap-3 justify-content-center">
           {charactersCards}
         </div>

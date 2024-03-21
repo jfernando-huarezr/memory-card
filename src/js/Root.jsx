@@ -61,45 +61,45 @@ export default function Root() {
 
   return (
     <>
-      <div className="main container py-4 px-3 mx-auto">
-        <header className="d-flex justify-content-center">
-          <div className="d-flex align-items-center">
-            <h1>Dragon Ball Memory Card Game</h1>
+      <div className="main container px-3 mx-auto">
+        <div className="sticky-top py-4 title">
+          <header className="d-flex justify-content-center">
+            <div className="d-flex align-items-center">
+              <h1>Dragon Ball Memory Card Game</h1>
+            </div>
+          </header>
+          <div className="startGame d-flex flex-column justify-content-center align-items-center">
+            <p>Select all the cards without repeating yourself!</p>
+            {!game && (
+              <button onClick={handleFirstPlay} className="btn btn-primary">
+                Click to play
+              </button>
+            )}
+            {game && (
+              <>
+                <div className="d-flex gap-4">
+                  <p>{`Score: ${score}`}</p>
+                  <p>{`Best Score: ${bestScore}`}</p>
+                </div>
+                {message && (
+                  <>
+                    <p>{message}</p>
+                    {score == 10 && (
+                      <button
+                        onClick={() => {
+                          setScore(0);
+                          setMessage("");
+                        }}
+                        className="btn btn-primary"
+                      >
+                        Play Again!
+                      </button>
+                    )}
+                  </>
+                )}
+              </>
+            )}
           </div>
-        </header>
-
-        <div className="startGame d-flex flex-column justify-content-center align-items-center mt-4">
-          {!game && (
-            <button onClick={handleFirstPlay} className="btn btn-primary">
-              Click to play
-            </button>
-          )}
-
-          {game && (
-            <>
-              <div className="d-flex gap-4">
-                <p>{`Score: ${score}`}</p>
-                <p>{`Best Score: ${bestScore}`}</p>
-              </div>
-
-              {message && (
-                <>
-                  <p>{message}</p>
-                  {score == 10 && (
-                    <button
-                      onClick={() => {
-                        setScore(0);
-                        setMessage("");
-                      }}
-                      className="btn btn-primary"
-                    >
-                      Play Again!
-                    </button>
-                  )}
-                </>
-              )}
-            </>
-          )}
         </div>
 
         {game &&
