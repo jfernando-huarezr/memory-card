@@ -1,8 +1,20 @@
 @import "bootstrap/scss/bootstrap";
 
-.main {
+#root {
   background-color: white;
-  height: 100vh;
+  background-image: url(../assets/kamehouse.webp);
+  background-position: center;
+}
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.gameboard {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 
 .card-characters {
@@ -12,11 +24,35 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: orange;
+  background-color: rgba(255, 165, 0, 0.6);
+  animation: fadeUp 2s ease 0s 1 normal forwards;
+  box-shadow: 5px 5px 10px 1px #000000;
 
   img {
     width: 140px;
     height: 250px;
     object-fit: contain;
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1); /* Default state */
+  }
+}
+
+.card-characters:hover {
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.6);
+  img {
+    transform: scale(1.2); /* Hover state */
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }

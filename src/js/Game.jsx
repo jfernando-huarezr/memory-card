@@ -7,7 +7,7 @@ export default function Game({ data }) {
 
   return (
     <>
-      <div className="gameboard">
+      <div className="gameboard mt-2">
         <div className="row gap-3 justify-content-center">
           {charactersCards}
         </div>
