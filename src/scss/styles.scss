@@ -15,6 +15,7 @@
   flex-grow: 1;
   display: flex;
   align-items: center;
+  animation: fadeUp 0.5s ease 0s 1 normal forwards;
 }
 
 .card-characters {
@@ -25,14 +26,13 @@
   justify-content: center;
   padding: 20px;
   background-color: rgba(255, 165, 0, 0.6);
-  animation: fadeUp 2s ease 0s 1 normal forwards;
   box-shadow: 5px 5px 10px 1px #000000;
 
   img {
     width: 140px;
     height: 250px;
     object-fit: contain;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.2s ease-in-out;
     transform: scale(1); /* Default state */
   }
 }
