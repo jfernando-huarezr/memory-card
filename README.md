@@ -4,4 +4,6 @@ Simple game of memory cards, with DBZ characters. The objective is to select all
 
 Done using React and Bootstrap.
 
+Live preview: https://dbz-memory-card-game.vercel.app/
+
 
