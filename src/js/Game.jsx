@@ -9,7 +9,14 @@ export default function Game({ data, handleScoring }) {
       setElementsClicked([]);
       handleScoring(false);
     } else {
-      setElementsClicked([...elementsClicked, id]);
+      setElementsClicked((prevData) => {
+        const newElementsClicked = [...prevData, id];
+        if (newElementsClicked.length === data.length) {
+          return [];
+        }
+
+        return newElementsClicked;
+      });
       handleScoring(true);
     }
   };

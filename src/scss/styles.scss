@@ -1,10 +1,16 @@
 @import "bootstrap/scss/bootstrap";
+@font-face {
+  font-family: "dbz-font";
+  src: url("../assets/fonts/Saiyan-Sans.ttf") format("truetype");
+}
 
 #root {
   background-color: white;
   background-image: url(../assets/kamehouse.webp);
   background-position: center;
+  font-family: "dbz-font", sans-serif;
 }
+
 .main {
   min-height: 100vh;
   display: flex;
