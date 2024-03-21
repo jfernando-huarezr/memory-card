@@ -1,1 +1,22 @@
 @import "bootstrap/scss/bootstrap";
+
+.main {
+  background-color: white;
+  height: 100vh;
+}
+
+.card-characters {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: orange;
+
+  img {
+    width: 140px;
+    height: 250px;
+    object-fit: contain;
+  }
+}
